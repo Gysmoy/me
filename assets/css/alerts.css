@@ -1,0 +1,103 @@
+#alertGysmoy * {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+#alertGysmoy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    border-radius: 10px;
+    width: 360px;
+    text-align: center;
+}
+#alertGysmoy .icon {
+    width: 90px;
+    margin: auto;
+}
+#alertGysmoy .content {
+    margin: 20px auto;
+}
+#alertGysmoy .buttons .accept {
+    font-size: medium;
+    padding: 6px 12px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    background-color: #00a65a;
+    color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    transition: .3s;
+}
+#alertGysmoy .buttons .accept:hover {
+    filter: opacity(0.75);
+}
+#alertGysmoy .buttons .cancel {
+    cursor: pointer;
+    font-size: medium;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 2px 7px 5px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+    transition: .3s;
+}
+#alertGysmoy .buttons .cancel:hover {
+    background-color: rgba(0, 0, 0, 0.125);
+}
+
+#alertGysmoy[mode="dark"] {
+    background-color: rgb(30, 30, 30);
+    color: #fff;
+}
+#alertGysmoy[mode="dark"]  {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+}
+#alertGysmoy[mode="dark"] .buttons .accept {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+}
+#alertGysmoy[mode="dark"] .buttons .cancel {
+    color: #fff;
+}
+#alertGysmoy[mode="dark"] .buttons .cancel:hover {
+    background-color: rgba(255, 255, 255, 0.125);
+}
+#alertGysmoy[type="success"] .icon {
+    content: url('../../icons/success.png');
+}
+#alertGysmoy[type="info"] .icon {
+    content: url('../../icons/info.png');
+}
+#alertGysmoy[type="warning"] .icon {
+    content: url('../../icons/warning.png');
+}
+#alertGysmoy[type="timeout"] .icon {
+    content: url('../../icons/timeout.png');
+}
+#alertGysmoy[button="both"] .buttons .accept,
+#alertGysmoy[button="both"] .buttons .cancel {
+    display: unset;
+}
+#alertGysmoy[button="none"] .buttons .accept,
+#alertGysmoy[button="none"] .buttons .cancel {
+    display: none;
+}
+#alertGysmoy[button="accept"] .buttons .accept {
+    display: unset;
+}
+#alertGysmoy[button="accept"] .buttons .cancel {
+    display: none;
+}
+#alertGysmoy[button="cancel"] .buttons .accept {
+    display: none;
+}
+#alertGysmoy[button="cancel"] .buttons .cancel {
+    display: unset;
+}
